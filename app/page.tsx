@@ -1,12 +1,89 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import CookieBanner from "./components/CookieBanner";
 
 export default function Home() {
   const [lang, setLang] = useState<"de" | "es" | "en" | "fr" | "it">("de");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [currentScreenshot, setCurrentScreenshot] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const [mouseStart, setMouseStart] = useState(0);
+  const [mouseEnd, setMouseEnd] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+
+  // Screenshots array
+  const screenshots = [
+    "/pantallas/IMG_5488.PNG",
+    "/pantallas/IMG_5489.PNG",
+    "/pantallas/IMG_5490.PNG",
+    "/pantallas/IMG_5492.PNG",
+    "/pantallas/IMG_5493.PNG",
+    "/pantallas/IMG_5494.PNG",
+    "/pantallas/IMG_5498.PNG"
+  ];
+
+  // Auto-scroll carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentScreenshot((prev) => (prev + 1) % screenshots.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [screenshots.length]);
+
+  // Handle swipe gestures
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 75) {
+      // Swiped left - next image
+      setCurrentScreenshot((prev) => (prev + 1) % screenshots.length);
+    }
+    if (touchStart - touchEnd < -75) {
+      // Swiped right - previous image
+      setCurrentScreenshot((prev) => (prev - 1 + screenshots.length) % screenshots.length);
+    }
+  };
+
+  // Handle mouse drag gestures
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setMouseStart(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (isDragging) {
+      setMouseEnd(e.clientX);
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      if (mouseStart - mouseEnd > 75) {
+        // Dragged left - next image
+        setCurrentScreenshot((prev) => (prev + 1) % screenshots.length);
+      }
+      if (mouseStart - mouseEnd < -75) {
+        // Dragged right - previous image
+        setCurrentScreenshot((prev) => (prev - 1 + screenshots.length) % screenshots.length);
+      }
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      setIsDragging(false);
+    }
+  };
 
   const t: any = {
     de: {
@@ -722,13 +799,46 @@ export default function Home() {
                   {/* Screen */}
                   <div className="relative bg-white rounded-[2.5rem] overflow-hidden aspect-[9/19.5]">
                     {/* Screenshot Carousel */}
-                    <div className="relative w-full h-full">
-                      <Image
-                        src="/pantallas/IMG_5488.PNG"
-                        alt="Hundezonen App Screenshot"
-                        fill
-                        className="object-cover"
-                      />
+                    <div
+                      className="relative w-full h-full overflow-hidden cursor-grab active:cursor-grabbing"
+                      onTouchStart={handleTouchStart}
+                      onTouchMove={handleTouchMove}
+                      onTouchEnd={handleTouchEnd}
+                      onMouseDown={handleMouseDown}
+                      onMouseMove={handleMouseMove}
+                      onMouseUp={handleMouseUp}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <div
+                        className="flex h-full transition-transform duration-500 ease-in-out"
+                        style={{ transform: `translateX(-${currentScreenshot * 100}%)` }}
+                      >
+                        {screenshots.map((screenshot, index) => (
+                          <div key={index} className="relative min-w-full h-full">
+                            <Image
+                              src={screenshot}
+                              alt={`Hundezonen App Screenshot ${index + 1}`}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Carousel Indicators */}
+                    <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                      {screenshots.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentScreenshot(index)}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            currentScreenshot === index
+                              ? "bg-primary w-6"
+                              : "bg-gray-300"
+                          }`}
+                        />
+                      ))}
                     </div>
                   </div>
                 </div>
