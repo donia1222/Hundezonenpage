@@ -89,7 +89,7 @@ export default function Home() {
   const t: any = {
     de: {
       hero: {
-        title: "Die beste App für Hundebesitzer",
+        title: "Die App für dich und deinen Hund 🐾",
         subtitle: "Entdecke und teile Hunderoutenenrouten in der Schweiz",
         description: "Hundezonen hilft dir, die besten Spaziergänge für deinen Hund zu finden. Mit Warnungen vor Giftködern, Services und KI-Chatbot.",
         cta: "Jetzt kostenlos herunterladen",
@@ -218,7 +218,7 @@ export default function Home() {
     },
     es: {
       hero: {
-        title: "La mejor app para dueños de perros",
+        title: "La App para ti y tu perro 🐾",
         subtitle: "Descubre y comparte rutas caninas en Suiza",
         description: "Hundezonen te ayuda a encontrar los mejores paseos para tu perro. Con alertas de veneno, servicios y chatbot IA.",
         cta: "Descargar gratis ahora",
@@ -347,7 +347,7 @@ export default function Home() {
     },
     en: {
       hero: {
-        title: "The best app for dog owners",
+        title: "The App for you and your dog 🐾",
         subtitle: "Discover and share dog routes in Switzerland",
         description: "Hundezonen helps you find the best walks for your dog. With poison alerts, services and AI chatbot.",
         cta: "Download for free now",
@@ -476,7 +476,7 @@ export default function Home() {
     },
     fr: {
       hero: {
-        title: "La meilleure app pour propriétaires de chiens",
+        title: "L'App pour toi et ton chien 🐾",
         subtitle: "Découvre et partage des itinéraires canins en Suisse",
         description: "Hundezonen t'aide à trouver les meilleures promenades pour ton chien. Avec alertes de poison, services et chatbot IA.",
         cta: "Télécharger gratuitement",
@@ -605,7 +605,7 @@ export default function Home() {
     },
     it: {
       hero: {
-        title: "La migliore app per proprietari di cani",
+        title: "L'App per te e il tuo cane 🐾",
         subtitle: "Scopri e condividi percorsi canini in Svizzera",
         description: "Hundezonen ti aiuta a trovare le migliori passeggiate per il tuo cane. Con allerte di veleno, servizi e chatbot IA.",
         cta: "Scarica gratis ora",
