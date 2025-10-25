@@ -13,6 +13,7 @@ export default function Home() {
   const [mouseStart, setMouseStart] = useState(0);
   const [mouseEnd, setMouseEnd] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
 
   // Screenshots array
   const screenshots = [
@@ -207,6 +208,13 @@ export default function Home() {
           terms: "AGB",
           contact: "Kontakt"
         }
+      },
+      downloadModal: {
+        title: "Bald verfügbar!",
+        message: "Hundezonen befindet sich in der letzten Entwicklungsphase. In wenigen Tagen wird die App verfügbar sein:",
+        ios: "Zuerst für iOS-Nutzer",
+        android: "Danach für Android-Nutzer",
+        close: "Verstanden"
       }
     },
     es: {
@@ -330,6 +338,13 @@ export default function Home() {
           terms: "Términos",
           contact: "Contacto"
         }
+      },
+      downloadModal: {
+        title: "¡Próximamente disponible!",
+        message: "Hundezonen está en su última fase de desarrollo. En pocos días la app estará disponible:",
+        ios: "Primero para usuarios de iOS",
+        android: "Después para usuarios de Android",
+        close: "Entendido"
       }
     },
     en: {
@@ -453,6 +468,13 @@ export default function Home() {
           terms: "Terms",
           contact: "Contact"
         }
+      },
+      downloadModal: {
+        title: "Coming Soon!",
+        message: "Hundezonen is in its final development phase. The app will be available in a few days:",
+        ios: "First for iOS users",
+        android: "Then for Android users",
+        close: "Got it"
       }
     },
     fr: {
@@ -576,6 +598,13 @@ export default function Home() {
           terms: "Conditions",
           contact: "Contact"
         }
+      },
+      downloadModal: {
+        title: "Bientôt disponible!",
+        message: "Hundezonen est dans sa dernière phase de développement. L'app sera disponible dans quelques jours:",
+        ios: "D'abord pour les utilisateurs iOS",
+        android: "Ensuite pour les utilisateurs Android",
+        close: "Compris"
       }
     },
     it: {
@@ -699,6 +728,13 @@ export default function Home() {
           terms: "Termini",
           contact: "Contatto"
         }
+      },
+      downloadModal: {
+        title: "Disponibile presto!",
+        message: "Hundezonen è nella sua fase finale di sviluppo. L'app sarà disponibile tra pochi giorni:",
+        ios: "Prima per utenti iOS",
+        android: "Poi per utenti Android",
+        close: "Ho capito"
       }
     }
   };
@@ -778,7 +814,10 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl">
+                <button
+                  onClick={() => setShowDownloadModal(true)}
+                  className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
+                >
                   {content.hero.cta}
                 </button>
               </div>
@@ -970,7 +1009,10 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <button className="w-full bg-gray-900 hover:bg-gray-800 text-white py-4 rounded-full font-semibold transition-all">
+              <button
+                onClick={() => setShowDownloadModal(true)}
+                className="w-full bg-gray-900 hover:bg-gray-800 text-white py-4 rounded-full font-semibold transition-all"
+              >
                 {content.pricing.free.cta}
               </button>
             </div>
@@ -994,7 +1036,10 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <button className="w-full bg-white text-primary hover:bg-gray-100 py-4 rounded-full font-semibold transition-all relative z-10">
+              <button
+                onClick={() => setShowDownloadModal(true)}
+                className="w-full bg-white text-primary hover:bg-gray-100 py-4 rounded-full font-semibold transition-all relative z-10"
+              >
                 {content.pricing.premium.cta}
               </button>
             </div>
@@ -1057,7 +1102,10 @@ export default function Home() {
             {lang === "it" && "Scarica Hundezonen gratis ora e unisciti alla comunità."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg">
+            <button
+              onClick={() => setShowDownloadModal(true)}
+              className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg"
+            >
               {content.hero.cta}
             </button>
           </div>
@@ -1126,6 +1174,41 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Download Modal */}
+      {showDownloadModal && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-4xl">📱</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                {content.downloadModal.title}
+              </h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                {content.downloadModal.message}
+              </p>
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center justify-center space-x-3 bg-gray-50 rounded-xl p-4">
+                  <span className="text-2xl">🍎</span>
+                  <span className="font-semibold text-gray-900">{content.downloadModal.ios}</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3 bg-gray-50 rounded-xl p-4">
+                  <span className="text-2xl">🤖</span>
+                  <span className="font-semibold text-gray-900">{content.downloadModal.android}</span>
+                </div>
+              </div>
+              <button
+                onClick={() => setShowDownloadModal(false)}
+                className="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-full font-semibold transition-all"
+              >
+                {content.downloadModal.close}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Cookie Banner */}
       <CookieBanner />
