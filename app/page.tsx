@@ -5,7 +5,7 @@ import Image from "next/image";
 import CookieBanner from "./components/CookieBanner";
 
 export default function Home() {
-  const [lang, setLang] = useState<"de" | "es" | "en">("de");
+  const [lang, setLang] = useState<"de" | "es" | "en" | "fr" | "it">("de");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const t: any = {
@@ -377,6 +377,252 @@ export default function Home() {
           contact: "Contact"
         }
       }
+    },
+    fr: {
+      hero: {
+        title: "La meilleure app pour propriétaires de chiens",
+        subtitle: "Découvre et partage des itinéraires canins en Suisse",
+        description: "Hundezonen t'aide à trouver les meilleures promenades pour ton chien. Avec alertes de poison, services et chatbot IA.",
+        cta: "Télécharger gratuitement",
+        availableOn: "Disponible pour",
+      },
+      features: {
+        title: "Tout ce dont tu as besoin",
+        subtitle: "Une plateforme complète pour propriétaires de chiens",
+        items: [
+          {
+            image: "/featuresimagenes/rutas.png",
+            title: "Découvre des itinéraires",
+            description: "Trouve les meilleures promenades près de toi avec tous les détails: eau, ombre, parking et plus."
+          },
+          {
+            image: "/featuresimagenes/guaradrrutas.png",
+            title: "Sauvegarde tes itinéraires",
+            description: "Crée et sauvegarde tes itinéraires préférés avec photos et descriptions à partager."
+          },
+          {
+            image: "/featuresimagenes/radar.png",
+            title: "Radar d'alertes",
+            description: "Reçois des alertes de zones dangereuses et poison pour chiens en temps réel."
+          },
+          {
+            image: "/featuresimagenes/servicios.png",
+            title: "Services canins",
+            description: "Trouve des vétérinaires, magasins, dresseurs, pensions et plus près de toi."
+          },
+          {
+            image: "/featuresimagenes/bot.png",
+            title: "Chatbot IA",
+            description: "Pose toutes tes questions sur ton chien: reconnaître la race, trouver un dresseur, conseils santé."
+          },
+          {
+            image: "/featuresimagenes/privado.png",
+            title: "Confidentialité",
+            description: "Choisis entre mode privé et public pour tes itinéraires."
+          }
+        ]
+      },
+      services: {
+        title: "Services canins près de toi",
+        subtitle: "Tout ce dont ton chien a besoin, en un coup d'œil",
+        items: [
+          { title: "Vétérinaires", color: "#FF6B6B", icon: "veterinary" },
+          { title: "Magasins", color: "#4ECDC4", icon: "store" },
+          { title: "Dresseurs", color: "#F39C12", icon: "trainer" },
+          { title: "Pensions", color: "#9B59B6", icon: "home" },
+          { title: "WC Chiens", color: "#95A5A6", icon: "toilet" },
+          { title: "Adoption", color: "#E74C3C", icon: "heart" }
+        ]
+      },
+      pricing: {
+        title: "Transparent et équitable",
+        subtitle: "Gratuit avec support optionnel",
+        free: {
+          title: "Gratuit",
+          price: "0 CHF",
+          features: [
+            "Découvrir tous les itinéraires",
+            "Sauvegarder tes propres itinéraires",
+            "Alertes de poison",
+            "Trouver des services canins",
+            "Utiliser le chatbot IA",
+            "Utilisation illimitée"
+          ],
+          cta: "Commencer maintenant"
+        },
+        premium: {
+          title: "Supporter",
+          price: "5 CHF",
+          period: "tous les 2 mois",
+          priceMonth: "≈ 2.50 CHF/mois",
+          features: [
+            "Toutes les fonctions gratuites",
+            "Soutenir le serveur et le développement",
+            "Mises à jour continues",
+            "Développé par un freelance",
+            "Moins qu'un café",
+            "Aider Hundezonen à grandir"
+          ],
+          cta: "Soutenir"
+        }
+      },
+      faq: {
+        title: "Questions Fréquentes",
+        items: [
+          {
+            q: "Qu'est-ce que Hundezonen?",
+            a: "Hundezonen est une application où tu peux sauvegarder tes itinéraires préférés pour promener ton chien. Tu peux aussi découvrir des itinéraires créés par d'autres utilisateurs près de ton emplacement, avec toutes les informations nécessaires avant de sortir te promener."
+          },
+          {
+            q: "Comment ça fonctionne?",
+            a: "Quand tu ouvres l'app, elle détecte automatiquement ton emplacement et te montre les itinéraires les plus proches, créés par d'autres utilisateurs. Tu peux voir si l'itinéraire a de l'eau, de l'ombre, un parking, des restaurants ou d'autres services utiles."
+          },
+          {
+            q: "Dans quels pays est-elle disponible?",
+            a: "Hundezonen sera initialement disponible en Suisse, Allemagne et Autriche. Plus tard, elle s'étendra à d'autres pays, selon la réponse du public."
+          },
+          {
+            q: "Que fait le chatbot avec intelligence artificielle?",
+            a: "Le chatbot t'aide avec tout ce qui concerne ton chien. Tu peux lui demander des choses comme: 'Trouve-moi un dresseur de chiens près de moi' ou 'Analyse cette photo et dis-moi de quelle race est mon chien'."
+          },
+          {
+            q: "Est-ce que Hundezonen est gratuit?",
+            a: "Oui, l'utilisation de base est complètement gratuite. Il y a un abonnement optionnel de 5 francs tous les deux mois (≈2 francs par mois) pour soutenir le développement."
+          }
+        ]
+      },
+      footer: {
+        tagline: "La communauté pour propriétaires de chiens",
+        rights: "Tous droits réservés",
+        links: {
+          privacy: "Confidentialité",
+          terms: "Conditions",
+          contact: "Contact"
+        }
+      }
+    },
+    it: {
+      hero: {
+        title: "La migliore app per proprietari di cani",
+        subtitle: "Scopri e condividi percorsi canini in Svizzera",
+        description: "Hundezonen ti aiuta a trovare le migliori passeggiate per il tuo cane. Con allerte di veleno, servizi e chatbot IA.",
+        cta: "Scarica gratis ora",
+        availableOn: "Disponibile per",
+      },
+      features: {
+        title: "Tutto ciò di cui hai bisogno",
+        subtitle: "Una piattaforma completa per proprietari di cani",
+        items: [
+          {
+            image: "/featuresimagenes/rutas.png",
+            title: "Scopri percorsi",
+            description: "Trova le migliori passeggiate vicino a te con tutti i dettagli: acqua, ombra, parcheggio e altro."
+          },
+          {
+            image: "/featuresimagenes/guaradrrutas.png",
+            title: "Salva i tuoi percorsi",
+            description: "Crea e salva i tuoi percorsi preferiti con foto e descrizioni da condividere."
+          },
+          {
+            image: "/featuresimagenes/radar.png",
+            title: "Radar di allerte",
+            description: "Ricevi allerte di zone pericolose e veleno per cani in tempo reale."
+          },
+          {
+            image: "/featuresimagenes/servicios.png",
+            title: "Servizi canini",
+            description: "Trova veterinari, negozi, addestratori, pensioni e altro vicino a te."
+          },
+          {
+            image: "/featuresimagenes/bot.png",
+            title: "Chatbot IA",
+            description: "Chiedi tutto sul tuo cane: riconoscere la razza, trovare addestratori, consigli sulla salute."
+          },
+          {
+            image: "/featuresimagenes/privado.png",
+            title: "Privacy",
+            description: "Scegli tra modalità privata e pubblica per i tuoi percorsi."
+          }
+        ]
+      },
+      services: {
+        title: "Servizi canini vicino a te",
+        subtitle: "Tutto ciò di cui il tuo cane ha bisogno, a colpo d'occhio",
+        items: [
+          { title: "Veterinari", color: "#FF6B6B", icon: "veterinary" },
+          { title: "Negozi", color: "#4ECDC4", icon: "store" },
+          { title: "Addestratori", color: "#F39C12", icon: "trainer" },
+          { title: "Pensioni", color: "#9B59B6", icon: "home" },
+          { title: "WC Cani", color: "#95A5A6", icon: "toilet" },
+          { title: "Adozione", color: "#E74C3C", icon: "heart" }
+        ]
+      },
+      pricing: {
+        title: "Trasparente ed equo",
+        subtitle: "Gratuito con supporto opzionale",
+        free: {
+          title: "Gratuito",
+          price: "0 CHF",
+          features: [
+            "Scoprire tutti i percorsi",
+            "Salvare i propri percorsi",
+            "Allerte di veleno",
+            "Trovare servizi canini",
+            "Usare il chatbot IA",
+            "Uso illimitato"
+          ],
+          cta: "Inizia ora"
+        },
+        premium: {
+          title: "Sostenitore",
+          price: "5 CHF",
+          period: "ogni 2 mesi",
+          priceMonth: "≈ 2.50 CHF/mese",
+          features: [
+            "Tutte le funzioni gratuite",
+            "Sostenere server e sviluppo",
+            "Aggiornamenti continui",
+            "Sviluppato da freelance",
+            "Meno di un caffè",
+            "Aiutare Hundezonen a crescere"
+          ],
+          cta: "Sostenere"
+        }
+      },
+      faq: {
+        title: "Domande Frequenti",
+        items: [
+          {
+            q: "Cos'è Hundezonen?",
+            a: "Hundezonen è un'applicazione dove puoi salvare i tuoi percorsi preferiti per passeggiare con il tuo cane. Puoi anche scoprire percorsi creati da altri utenti vicino alla tua posizione, con tutte le informazioni necessarie prima di uscire a passeggiare."
+          },
+          {
+            q: "Come funziona?",
+            a: "Quando apri l'app, rileva automaticamente la tua posizione e ti mostra i percorsi più vicini, creati da altri utenti. Puoi vedere se il percorso ha acqua, ombra, parcheggio, ristoranti o altri servizi utili."
+          },
+          {
+            q: "In quali paesi è disponibile?",
+            a: "Hundezonen sarà inizialmente disponibile in Svizzera, Germania e Austria. Successivamente si espanderà ad altri paesi, a seconda della risposta del pubblico."
+          },
+          {
+            q: "Cosa fa il chatbot con intelligenza artificiale?",
+            a: "Il chatbot ti aiuta con tutto ciò che riguarda il tuo cane. Puoi chiedergli cose come: 'Trovami un addestratore di cani vicino a me' o 'Analizza questa foto e dimmi di che razza è il mio cane'."
+          },
+          {
+            q: "Hundezonen è gratuito?",
+            a: "Sì, l'uso di base è completamente gratuito. C'è un abbonamento opzionale di 5 franchi ogni due mesi (≈2 franchi al mese) per sostenere lo sviluppo."
+          }
+        ]
+      },
+      footer: {
+        tagline: "La comunità per proprietari di cani",
+        rights: "Tutti i diritti riservati",
+        links: {
+          privacy: "Privacy",
+          terms: "Termini",
+          contact: "Contatto"
+        }
+      }
     }
   };
 
@@ -433,24 +679,7 @@ export default function Home() {
                 height={40}
                 className="rounded-xl"
               />
-              <span className="text-1xl font-bold text-primary">Hundezonen🇨🇭</span>
-            </div>
-
-            {/* Language Selector */}
-            <div className="flex space-x-2">
-              {["de", "es", "en"].map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l as any)}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
-                    lang === l
-                      ? "bg-primary text-white"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                  }`}
-                >
-                  {l.toUpperCase()}
-                </button>
-              ))}
+              <span className="text-2xl font-bold text-primary">Hundezonen🇨🇭</span>
             </div>
           </div>
         </div>
@@ -707,11 +936,15 @@ export default function Home() {
             {lang === "de" && "Bereit, die besten Routen zu entdecken?"}
             {lang === "es" && "¿Listo para descubrir las mejores rutas?"}
             {lang === "en" && "Ready to discover the best routes?"}
+            {lang === "fr" && "Prêt à découvrir les meilleurs itinéraires?"}
+            {lang === "it" && "Pronto a scoprire i migliori percorsi?"}
           </h2>
           <p className="text-xl mb-8 opacity-90">
             {lang === "de" && "Lade Hundezonen jetzt kostenlos herunter und werde Teil der Community."}
             {lang === "es" && "Descarga Hundezonen gratis ahora y únete a la comunidad."}
             {lang === "en" && "Download Hundezonen for free now and join the community."}
+            {lang === "fr" && "Télécharge Hundezonen gratuitement maintenant et rejoins la communauté."}
+            {lang === "it" && "Scarica Hundezonen gratis ora e unisciti alla comunità."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg">
@@ -753,6 +986,8 @@ export default function Home() {
                 {lang === "de" && "Verfügbar in"}
                 {lang === "es" && "Disponible en"}
                 {lang === "en" && "Available in"}
+                {lang === "fr" && "Disponible en"}
+                {lang === "it" && "Disponibile in"}
               </h3>
               <p className="text-gray-400">🇨🇭 Schweiz</p>
               <p className="text-gray-400">🇩🇪 Deutschland</p>
@@ -761,6 +996,22 @@ export default function Home() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+            {/* Language Selector */}
+            <div className="flex justify-center space-x-2 mb-4">
+              {["de", "fr", "it", "en", "es"].map((l) => (
+                <button
+                  key={l}
+                  onClick={() => setLang(l as any)}
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                    lang === l
+                      ? "bg-primary text-white"
+                      : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                  }`}
+                >
+                  {l.toUpperCase()}
+                </button>
+              ))}
+            </div>
             <p>© 2025 Hundezonen. {content.footer.rights}</p>
           </div>
         </div>
