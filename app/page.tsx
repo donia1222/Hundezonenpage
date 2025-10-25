@@ -790,14 +790,14 @@ export default function Home() {
 
             {/* Phone Mockup with Real Screenshots */}
             <div className="relative">
-              <div className="relative z-10 mx-auto max-w-sm">
+              <div className="relative z-10 mx-auto max-w-[280px] sm:max-w-sm">
                 {/* Phone Frame */}
-                <div className="relative bg-gray-900 rounded-[3rem] p-3 shadow-2xl">
+                <div className="relative bg-gray-900 rounded-[2rem] sm:rounded-[3rem] p-2 sm:p-3 shadow-2xl">
                   {/* Notch */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-gray-900 rounded-b-3xl z-20"></div>
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 sm:w-40 h-5 sm:h-7 bg-gray-900 rounded-b-2xl sm:rounded-b-3xl z-20"></div>
 
                   {/* Screen */}
-                  <div className="relative bg-white rounded-[2.5rem] overflow-hidden aspect-[9/19.5]">
+                  <div className="relative bg-white rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden aspect-[9/19.5]">
                     {/* Screenshot Carousel */}
                     <div
                       className="relative w-full h-full overflow-hidden cursor-grab active:cursor-grabbing"
@@ -827,14 +827,14 @@ export default function Home() {
                     </div>
 
                     {/* Carousel Indicators */}
-                    <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                    <div className="absolute bottom-2 sm:bottom-4 left-0 right-0 flex justify-center gap-1.5 sm:gap-2 z-10">
                       {screenshots.map((_, index) => (
                         <button
                           key={index}
                           onClick={() => setCurrentScreenshot(index)}
-                          className={`w-2 h-2 rounded-full transition-all ${
+                          className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all ${
                             currentScreenshot === index
-                              ? "bg-primary w-6"
+                              ? "bg-primary w-4 sm:w-6"
                               : "bg-gray-300"
                           }`}
                         />
@@ -845,7 +845,7 @@ export default function Home() {
               </div>
 
               {/* Floating Screenshots */}
-              <div className="absolute -left-8 top-20 w-24 h-52 opacity-30 rotate-12 hidden lg:block">
+              <div className="absolute -left-8 top-20 w-20 h-44 md:w-24 md:h-52 opacity-20 md:opacity-30 rotate-12 hidden md:block">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
                   <Image
                     src="/pantallas/IMG_5489.PNG"
@@ -855,7 +855,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="absolute -right-8 top-40 w-24 h-52 opacity-30 -rotate-12 hidden lg:block">
+              <div className="absolute -right-8 top-40 w-20 h-44 md:w-24 md:h-52 opacity-20 md:opacity-30 -rotate-12 hidden md:block">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
                   <Image
                     src="/pantallas/IMG_5490.PNG"
@@ -866,8 +866,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="absolute top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-300/20 rounded-full blur-3xl"></div>
+              <div className="absolute top-10 -right-10 w-24 h-24 md:w-32 md:h-32 bg-primary/20 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-10 -left-10 w-32 h-32 md:w-40 md:h-40 bg-blue-300/20 rounded-full blur-3xl"></div>
             </div>
           </div>
         </div>
