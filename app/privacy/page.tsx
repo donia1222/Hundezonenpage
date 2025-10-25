@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function PrivacyPage() {
+  const [lang, setLang] = useState<"de" | "es" | "en" | "fr" | "it">("de");
+
   const content: any = {
     de: {
       title: "Datenschutzerklärung",
@@ -27,10 +30,107 @@ export default function PrivacyPage() {
       section4: "Sie können jederzeit auf Ihre persönlichen Daten zugreifen, diese berichtigen oder löschen. Kontaktieren Sie uns, um diese Rechte auszuüben.",
       section5Title: "Kontakt",
       section5: "E-Mail: info@hundezonen.ch\nTelefon: +41 81 750 19 11",
+      backButton: "Zurück zur Startseite",
+    },
+    es: {
+      title: "Política de Privacidad",
+      noDataSaleTitle: "TU PRIVACIDAD ES NUESTRA PRIORIDAD",
+      noDataSale: "HundeZonen NO vende, NO alquila y NO comparte tus datos personales con terceros para publicidad o fines comerciales. Tus datos se usan exclusivamente para la funcionalidad de la app y NUNCA para beneficio de terceros.",
+      privacyModesTitle: "2 Modos de Privacidad",
+      publicModeTitle: "Modo Público",
+      publicModeDesc: "Otros usuarios pueden encontrarte, ver tu perfil y tus rutas publicadas. Puedes interactuar con la comunidad.",
+      privateModeTitle: "Modo Privado",
+      privateModeDesc: "Estás 100% INCÓGNITO. Nadie puede verte, ni tu perfil ni tus rutas. Es como si no existieras en la app. Solo tú ves tus rutas guardadas/favoritas. Modo ideal para usar la app sin ser visible para otros.",
+      modeChoice: "Tú eliges cómo usar la app: visible o completamente invisible. Tu privacidad, tu elección.",
+      startChatTitle: "Chat de Inicio",
+      startChatDesc: "Cuando seleccionas un chat de inicio, se elimina la insignia de notificación '1' y NO se guardan datos personales tuyos para este propósito. El usuario puede eliminar esta tarjeta de su perfil en cualquier momento.",
+      section1Title: "Información que recopilamos",
+      section1: "a) Información de cuenta: Datos como tu nombre, email y datos de contacto al crear una cuenta.\nb) Ubicación: Para mostrar rutas cercanas. Puedes revocar este permiso en cualquier momento desde la configuración del dispositivo.\nc) Contenido que compartes: Fotos, reseñas o comentarios de rutas (solo en modo público).",
+      section2Title: "Uso de los datos",
+      section2: "Tus datos se usan EXCLUSIVAMENTE para la funcionalidad de la app: mostrar rutas cercanas, interacciones con otros usuarios (en modo público) y mejorar la experiencia de usuario.",
+      section3Title: "Seguridad",
+      section3: "Implementamos medidas de seguridad para proteger tu información de accesos no autorizados.",
+      section4Title: "Tus derechos",
+      section4: "Puedes acceder, corregir o eliminar tus datos personales en cualquier momento. Contáctanos para ejercer estos derechos.",
+      section5Title: "Contacto",
+      section5: "Email: info@hundezonen.ch\nTeléfono: +41 81 750 19 11",
+      backButton: "Volver a la página principal",
+    },
+    en: {
+      title: "Privacy Policy",
+      noDataSaleTitle: "YOUR PRIVACY IS OUR PRIORITY",
+      noDataSale: "HundeZonen does NOT sell, does NOT rent, and does NOT share your personal data with third parties for advertising or commercial purposes. Your data is used exclusively for app functionality and NEVER for the benefit of third parties.",
+      privacyModesTitle: "2 Privacy Modes",
+      publicModeTitle: "Public Mode",
+      publicModeDesc: "Other users can find you, see your profile and your published routes. You can interact with the community.",
+      privateModeTitle: "Private Mode",
+      privateModeDesc: "You are 100% INCOGNITO. No one can see you, neither your profile nor your routes. It's as if you don't exist in the app. Only you see your saved/favorite routes. Ideal mode to use the app without being visible to others.",
+      modeChoice: "You choose how to use the app: visible or completely invisible. Your privacy, your choice.",
+      startChatTitle: "Start Chat",
+      startChatDesc: "When you select a start chat, the notification badge '1' is removed and NO personal data of yours is saved for this purpose. The user can delete this card from their profile at any time.",
+      section1Title: "Information we collect",
+      section1: "a) Account information: Data such as your name, email and contact details when creating an account.\nb) Location: To display nearby routes. You can revoke this permission at any time from device settings.\nc) Content you share: Photos, reviews or comments on routes (public mode only).",
+      section2Title: "Use of data",
+      section2: "Your data is used EXCLUSIVELY for app functionality: displaying nearby routes, interactions with other users (in public mode) and improving user experience.",
+      section3Title: "Security",
+      section3: "We implement security measures to protect your information from unauthorized access.",
+      section4Title: "Your rights",
+      section4: "You can access, correct or delete your personal data at any time. Contact us to exercise these rights.",
+      section5Title: "Contact",
+      section5: "Email: info@hundezonen.ch\nPhone: +41 81 750 19 11",
+      backButton: "Back to home page",
+    },
+    fr: {
+      title: "Politique de Confidentialité",
+      noDataSaleTitle: "VOTRE VIE PRIVÉE EST NOTRE PRIORITÉ",
+      noDataSale: "HundeZonen NE vend PAS, NE loue PAS et NE partage PAS vos données personnelles avec des tiers à des fins publicitaires ou commerciales. Vos données sont utilisées exclusivement pour la fonctionnalité de l'application et JAMAIS au profit de tiers.",
+      privacyModesTitle: "2 Modes de Confidentialité",
+      publicModeTitle: "Mode Public",
+      publicModeDesc: "Les autres utilisateurs peuvent vous trouver, voir votre profil et vos itinéraires publiés. Vous pouvez interagir avec la communauté.",
+      privateModeTitle: "Mode Privé",
+      privateModeDesc: "Vous êtes 100% INCOGNITO. Personne ne peut vous voir, ni votre profil ni vos itinéraires. C'est comme si vous n'existiez pas dans l'application. Vous seul voyez vos itinéraires sauvegardés/favoris. Mode idéal pour utiliser l'application sans être visible pour les autres.",
+      modeChoice: "Vous choisissez comment utiliser l'application: visible ou complètement invisible. Votre vie privée, votre choix.",
+      startChatTitle: "Chat de Démarrage",
+      startChatDesc: "Lorsque vous sélectionnez un chat de démarrage, le badge de notification '1' est supprimé et AUCUNE donnée personnelle vous concernant n'est enregistrée à cette fin. L'utilisateur peut supprimer cette carte de son profil à tout moment.",
+      section1Title: "Informations que nous collectons",
+      section1: "a) Informations de compte: Données telles que votre nom, email et coordonnées lors de la création d'un compte.\nb) Localisation: Pour afficher les itinéraires à proximité. Vous pouvez révoquer cette autorisation à tout moment depuis les paramètres de l'appareil.\nc) Contenu que vous partagez: Photos, avis ou commentaires sur les itinéraires (mode public uniquement).",
+      section2Title: "Utilisation des données",
+      section2: "Vos données sont utilisées EXCLUSIVEMENT pour la fonctionnalité de l'application: affichage des itinéraires à proximité, interactions avec d'autres utilisateurs (en mode public) et amélioration de l'expérience utilisateur.",
+      section3Title: "Sécurité",
+      section3: "Nous mettons en œuvre des mesures de sécurité pour protéger vos informations contre tout accès non autorisé.",
+      section4Title: "Vos droits",
+      section4: "Vous pouvez accéder, corriger ou supprimer vos données personnelles à tout moment. Contactez-nous pour exercer ces droits.",
+      section5Title: "Contact",
+      section5: "Email: info@hundezonen.ch\nTéléphone: +41 81 750 19 11",
+      backButton: "Retour à la page d'accueil",
+    },
+    it: {
+      title: "Informativa sulla Privacy",
+      noDataSaleTitle: "LA TUA PRIVACY È LA NOSTRA PRIORITÀ",
+      noDataSale: "HundeZonen NON vende, NON affitta e NON condivide i tuoi dati personali con terze parti per scopi pubblicitari o commerciali. I tuoi dati vengono utilizzati esclusivamente per la funzionalità dell'app e MAI a beneficio di terzi.",
+      privacyModesTitle: "2 Modalità di Privacy",
+      publicModeTitle: "Modalità Pubblica",
+      publicModeDesc: "Altri utenti possono trovarti, vedere il tuo profilo e i tuoi percorsi pubblicati. Puoi interagire con la community.",
+      privateModeTitle: "Modalità Privata",
+      privateModeDesc: "Sei 100% INCOGNITO. Nessuno può vederti, né il tuo profilo né i tuoi percorsi. È come se non esistessi nell'app. Solo tu vedi i tuoi percorsi salvati/preferiti. Modalità ideale per usare l'app senza essere visibile agli altri.",
+      modeChoice: "Tu scegli come usare l'app: visibile o completamente invisibile. La tua privacy, la tua scelta.",
+      startChatTitle: "Chat di Avvio",
+      startChatDesc: "Quando selezioni una chat di avvio, il badge di notifica '1' viene rimosso e NESSUN dato personale viene salvato per questo scopo. L'utente può eliminare questa scheda dal proprio profilo in qualsiasi momento.",
+      section1Title: "Informazioni che raccogliamo",
+      section1: "a) Informazioni account: Dati come nome, email e dettagli di contatto durante la creazione di un account.\nb) Posizione: Per mostrare percorsi vicini. Puoi revocare questa autorizzazione in qualsiasi momento dalle impostazioni del dispositivo.\nc) Contenuti che condividi: Foto, recensioni o commenti sui percorsi (solo in modalità pubblica).",
+      section2Title: "Utilizzo dei dati",
+      section2: "I tuoi dati vengono utilizzati ESCLUSIVAMENTE per la funzionalità dell'app: visualizzazione percorsi vicini, interazioni con altri utenti (in modalità pubblica) e miglioramento dell'esperienza utente.",
+      section3Title: "Sicurezza",
+      section3: "Implementiamo misure di sicurezza per proteggere le tue informazioni da accessi non autorizzati.",
+      section4Title: "I tuoi diritti",
+      section4: "Puoi accedere, correggere o eliminare i tuoi dati personali in qualsiasi momento. Contattaci per esercitare questi diritti.",
+      section5Title: "Contatto",
+      section5: "Email: info@hundezonen.ch\nTelefono: +41 81 750 19 11",
+      backButton: "Torna alla pagina principale",
     }
   };
 
-  const t = content.de;
+  const t = content[lang];
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -56,6 +156,23 @@ export default function PrivacyPage() {
       <div className="pt-24 pb-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12">
+            {/* Language Selector */}
+            <div className="flex justify-center space-x-2 mb-8">
+              {["de", "fr", "it", "en", "es"].map((l) => (
+                <button
+                  key={l}
+                  onClick={() => setLang(l as any)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    lang === l
+                      ? "bg-primary text-white"
+                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  }`}
+                >
+                  {l.toUpperCase()}
+                </button>
+              ))}
+            </div>
+
             {/* Title */}
             <h1 className="text-2xl font-bold text-center text-primary mb-8">
               {t.title}
@@ -187,7 +304,7 @@ export default function PrivacyPage() {
                 href="/"
                 className="inline-block bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-semibold transition-all"
               >
-                Zurück zur Startseite
+                {t.backButton}
               </Link>
             </div>
           </div>

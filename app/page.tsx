@@ -90,7 +90,7 @@ export default function Home() {
     de: {
       hero: {
         title: "Die App für dich und deinen Hund 🐾",
-        subtitle: "Entdecke und teile Hunderoutenenrouten in der Schweiz",
+        subtitle: "Entdecke und teile Hunderoutenenrouten in der Schweiz, Deutschland und Österreich",
         description: "Hundezonen hilft dir, die besten Spaziergänge für deinen Hund zu finden. Mit Warnungen vor Giftködern, Services und KI-Chatbot.",
         cta: "Jetzt kostenlos herunterladen",
         availableOn: "Verfügbar für",
@@ -219,7 +219,7 @@ export default function Home() {
     es: {
       hero: {
         title: "La App para ti y tu perro 🐾",
-        subtitle: "Descubre y comparte rutas caninas en Suiza",
+        subtitle: "Descubre y comparte rutas caninas en Suiza, Alemania y Austria",
         description: "Hundezonen te ayuda a encontrar los mejores paseos para tu perro. Con alertas de veneno, servicios y chatbot IA.",
         cta: "Descargar gratis ahora",
         availableOn: "Disponible para",
@@ -348,7 +348,7 @@ export default function Home() {
     en: {
       hero: {
         title: "The App for you and your dog 🐾",
-        subtitle: "Discover and share dog routes in Switzerland",
+        subtitle: "Discover and share dog routes in Switzerland, Germany and Austria",
         description: "Hundezonen helps you find the best walks for your dog. With poison alerts, services and AI chatbot.",
         cta: "Download for free now",
         availableOn: "Available on",
@@ -477,7 +477,7 @@ export default function Home() {
     fr: {
       hero: {
         title: "L'App pour toi et ton chien 🐾",
-        subtitle: "Découvre et partage des itinéraires canins en Suisse",
+        subtitle: "Découvre et partage des itinéraires canins en Suisse, Allemagne et Autriche",
         description: "Hundezonen t'aide à trouver les meilleures promenades pour ton chien. Avec alertes de poison, services et chatbot IA.",
         cta: "Télécharger gratuitement",
         availableOn: "Disponible pour",
@@ -606,7 +606,7 @@ export default function Home() {
     it: {
       hero: {
         title: "L'App per te e il tuo cane 🐾",
-        subtitle: "Scopri e condividi percorsi canini in Svizzera",
+        subtitle: "Scopri e condividi percorsi canini in Svizzera, Germania e Austria",
         description: "Hundezonen ti aiuta a trovare le migliori passeggiate per il tuo cane. Con allerte di veleno, servizi e chatbot IA.",
         cta: "Scarica gratis ora",
         availableOn: "Disponibile per",
@@ -787,7 +787,7 @@ export default function Home() {
                 height={40}
                 className="rounded-xl"
               />
-              <span className="text-2xl font-bold text-primary">Hundezonen🇨🇭</span>
+              <span className="text-2xl font-bold text-primary">Hundezonen</span>
             </div>
           </div>
         </div>
