@@ -73,7 +73,7 @@ Durch die Nutzung dieser App erkennen Sie an, dass Sie diese Allgemeinen Geschä
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl font-bold text-center text-primary mb-8">
+            <h1 className="text-2xl font-bold text-center text-primary mb-8">
               {t.title}
             </h1>
 

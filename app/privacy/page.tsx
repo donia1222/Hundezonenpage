@@ -57,7 +57,7 @@ export default function PrivacyPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12">
             {/* Title */}
-            <h1 className="text-4xl font-bold text-center text-primary mb-8">
+            <h1 className="text-2xl font-bold text-center text-primary mb-8">
               {t.title}
             </h1>
 
