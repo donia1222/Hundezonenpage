@@ -151,11 +151,9 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Alle Routen entdecken",
-            "Eigene Routen speichern",
+            "Maximal 4 Routen speichern",
             "Giftköder-Warnungen",
-            "Hunde-Services finden",
-            "KI-Chatbot nutzen",
-            "Unbegrenzt nutzbar"
+            "Hunde-Services finden"
           ],
           cta: "Jetzt starten"
         },
@@ -166,11 +164,11 @@ export default function Home() {
           priceMonth: "≈ 2.50 CHF/Monat",
           features: [
             "Alle kostenlosen Features",
-            "Server & Entwicklung unterstützen",
+            "Unbegrenzte Routen erstellen",
             "Kontinuierliche Updates",
             "Entwickelt von Freelancer",
             "Weniger als ein Kaffee",
-            "Hundezonen weiter wachsen lassen"
+            "Zugang zum KI-Chatbot"
           ],
           cta: "Unterstützen"
         }
@@ -281,11 +279,9 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Descubrir todas las rutas",
-            "Guardar tus propias rutas",
+            "Máximo 4 rutas guardadas",
             "Alertas de veneno",
-            "Encontrar servicios caninos",
-            "Usar chatbot IA",
-            "Uso ilimitado"
+            "Encontrar servicios caninos"
           ],
           cta: "Empezar ahora"
         },
@@ -296,11 +292,11 @@ export default function Home() {
           priceMonth: "≈ 2.50 CHF/mes",
           features: [
             "Todas las funciones gratis",
-            "Apoyar servidor y desarrollo",
+            "Rutas ilimitadas",
             "Actualizaciones continuas",
             "Desarrollado por freelancer",
             "Menos que un café",
-            "Ayudar a crecer Hundezonen"
+            "Acceso al chatbot IA"
           ],
           cta: "Apoyar"
         }
@@ -411,11 +407,9 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Discover all routes",
-            "Save your own routes",
+            "Save up to 4 routes",
             "Poison alerts",
-            "Find dog services",
-            "Use AI chatbot",
-            "Unlimited use"
+            "Find dog services"
           ],
           cta: "Start now"
         },
@@ -426,11 +420,11 @@ export default function Home() {
           priceMonth: "≈ 2.50 CHF/month",
           features: [
             "All free features",
-            "Support server & development",
+            "Unlimited routes",
             "Continuous updates",
             "Developed by freelancer",
             "Less than a coffee",
-            "Help Hundezonen grow"
+            "AI Chatbot access"
           ],
           cta: "Support"
         }
@@ -541,11 +535,9 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Découvrir tous les itinéraires",
-            "Sauvegarder tes propres itinéraires",
+            "Maximum 4 itinéraires sauvegardés",
             "Alertes de poison",
-            "Trouver des services canins",
-            "Utiliser le chatbot IA",
-            "Utilisation illimitée"
+            "Trouver des services canins"
           ],
           cta: "Commencer maintenant"
         },
@@ -556,11 +548,11 @@ export default function Home() {
           priceMonth: "≈ 2.50 CHF/mois",
           features: [
             "Toutes les fonctions gratuites",
-            "Soutenir le serveur et le développement",
+            "Routes illimitées",
             "Mises à jour continues",
             "Développé par un freelance",
             "Moins qu'un café",
-            "Aider Hundezonen à grandir"
+            "Accès au chatbot IA"
           ],
           cta: "Soutenir"
         }
@@ -671,11 +663,9 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Scoprire tutti i percorsi",
-            "Salvare i propri percorsi",
+            "Massimo 4 percorsi salvati",
             "Allerte di veleno",
-            "Trovare servizi canini",
-            "Usare il chatbot IA",
-            "Uso illimitato"
+            "Trovare servizi canini"
           ],
           cta: "Inizia ora"
         },
@@ -686,11 +676,11 @@ export default function Home() {
           priceMonth: "≈ 2.50 CHF/mese",
           features: [
             "Tutte le funzioni gratuite",
-            "Sostenere server e sviluppo",
+            "Percorsi illimitati",
             "Aggiornamenti continui",
             "Sviluppato da freelance",
             "Meno di un caffè",
-            "Aiutare Hundezonen a crescere"
+            "Accesso al chatbot IA"
           ],
           cta: "Sostenere"
         }
