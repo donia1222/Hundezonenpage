@@ -153,7 +153,8 @@ export default function Home() {
             "Alle Routen entdecken",
             "Maximal 4 Routen speichern",
             "Giftköder-Warnungen",
-            "Hunde-Services finden"
+            "Hunde-Services finden",
+            "Ohne Werbung"
           ],
           cta: "Jetzt starten"
         },
@@ -281,7 +282,8 @@ export default function Home() {
             "Descubrir todas las rutas",
             "Máximo 4 rutas guardadas",
             "Alertas de veneno",
-            "Encontrar servicios caninos"
+            "Encontrar servicios caninos",
+            "Sin publicidad"
           ],
           cta: "Empezar ahora"
         },
@@ -409,7 +411,8 @@ export default function Home() {
             "Discover all routes",
             "Save up to 4 routes",
             "Poison alerts",
-            "Find dog services"
+            "Find dog services",
+            "No ads"
           ],
           cta: "Start now"
         },
@@ -537,7 +540,8 @@ export default function Home() {
             "Découvrir tous les itinéraires",
             "Maximum 4 itinéraires sauvegardés",
             "Alertes de poison",
-            "Trouver des services canins"
+            "Trouver des services canins",
+            "Sans publicité"
           ],
           cta: "Commencer maintenant"
         },
@@ -665,7 +669,8 @@ export default function Home() {
             "Scoprire tutti i percorsi",
             "Massimo 4 percorsi salvati",
             "Allerte di veleno",
-            "Trovare servizi canini"
+            "Trovare servizi canini",
+            "Senza pubblicità"
           ],
           cta: "Inizia ora"
         },
