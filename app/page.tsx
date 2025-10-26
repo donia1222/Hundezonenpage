@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import CookieBanner from "./components/CookieBanner";
+import { useCountryDetection } from "./hooks/useCountryDetection";
 
 export default function Home() {
   const [lang, setLang] = useState<"de" | "es" | "en" | "fr" | "it">("de");
@@ -14,6 +15,7 @@ export default function Home() {
   const [mouseEnd, setMouseEnd] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const { country, isLoading } = useCountryDetection();
 
   // Screenshots array
   const screenshots = [
@@ -787,7 +789,14 @@ export default function Home() {
                 height={40}
                 className="rounded-xl"
               />
-              <span className="text-2xl font-bold text-primary">Hundezonen</span>
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl font-bold text-primary">Hundezonen</span>
+                {!isLoading && (
+                  <span className="text-2xl" title={country.name}>
+                    {country.flag}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -1120,7 +1129,14 @@ export default function Home() {
                   height={40}
                   className="rounded-xl"
                 />
-                <span className="text-2xl font-bold">Hundezonen</span>
+                <div className="flex items-center space-x-2">
+                  <span className="text-2xl font-bold">Hundezonen</span>
+                  {!isLoading && (
+                    <span className="text-2xl" title={country.name}>
+                      {country.flag}
+                    </span>
+                  )}
+                </div>
               </div>
               <p className="text-gray-400">{content.footer.tagline}</p>
             </div>
