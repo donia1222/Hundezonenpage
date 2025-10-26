@@ -176,7 +176,6 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Alle Routen entdecken",
-            "Maximal 4 Routen speichern",
             "Giftköder-Warnungen",
             "Hunde-Services finden",
             "Ohne Werbung"
@@ -305,7 +304,6 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Descubrir todas las rutas",
-            "Máximo 4 rutas guardadas",
             "Alertas de veneno",
             "Encontrar servicios caninos",
             "Sin publicidad"
@@ -434,7 +432,6 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Discover all routes",
-            "Save up to 4 routes",
             "Poison alerts",
             "Find dog services",
             "No ads"
@@ -563,7 +560,6 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Découvrir tous les itinéraires",
-            "Maximum 4 itinéraires sauvegardés",
             "Alertes de poison",
             "Trouver des services canins",
             "Sans publicité"
@@ -692,7 +688,6 @@ export default function Home() {
           price: "0 CHF",
           features: [
             "Scoprire tutti i percorsi",
-            "Massimo 4 percorsi salvati",
             "Allerte di veleno",
             "Trovare servizi canini",
             "Senza pubblicità"
