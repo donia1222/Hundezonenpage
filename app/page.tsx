@@ -17,6 +17,29 @@ export default function Home() {
   const [showDownloadModal, setShowDownloadModal] = useState(false);
   const { country, isLoading } = useCountryDetection();
 
+  // Detect browser language on mount
+  useEffect(() => {
+    const detectBrowserLanguage = () => {
+      const browserLang = navigator.language || navigator.languages?.[0];
+      const langCode = browserLang.split('-')[0].toLowerCase();
+
+      // Map browser language to supported languages
+      const supportedLangs: ("de" | "es" | "en" | "fr" | "it")[] = ["de", "es", "en", "fr", "it"];
+
+      if (supportedLangs.includes(langCode as any)) {
+        setLang(langCode as "de" | "es" | "en" | "fr" | "it");
+      }
+      // Otherwise keep default "de"
+    };
+
+    detectBrowserLanguage();
+  }, []);
+
+  // Update HTML lang attribute when language changes
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   // Screenshots array
   const screenshots = [
     "/pantallas/IMG_5488.PNG",
