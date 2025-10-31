@@ -1064,36 +1064,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <div className="flex gap-2 justify-center">
-                <a
-                  href="https://apps.apple.com/us/app/hundezonen/id6745336299"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-transform hover:scale-105"
-                >
-                  <Image
-                    src="/apple.png"
-                    alt="Download on App Store"
-                    width={120}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-transform hover:scale-105"
-                >
-                  <Image
-                    src="/google.png"
-                    alt="Get it on Google Play"
-                    width={120}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
-                </a>
-              </div>
+
             </div>
 
             {/* Premium Plan */}
@@ -1115,42 +1086,13 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <div className="flex gap-2 justify-center relative z-10">
-                <a
-                  href="https://apps.apple.com/us/app/hundezonen/id6745336299"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-transform hover:scale-105"
-                >
-                  <Image
-                    src="/apple.png"
-                    alt="Download on App Store"
-                    width={120}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-transform hover:scale-105"
-                >
-                  <Image
-                    src="/google.png"
-                    alt="Get it on Google Play"
-                    width={120}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
-                </a>
-              </div>
+      
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section */} 
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
