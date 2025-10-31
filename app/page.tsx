@@ -14,7 +14,6 @@ export default function Home() {
   const [mouseStart, setMouseStart] = useState(0);
   const [mouseEnd, setMouseEnd] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
-  const [showDownloadModal, setShowDownloadModal] = useState(false);
   const { country, isLoading } = useCountryDetection();
 
   // Detect browser language on mount
@@ -233,11 +232,13 @@ export default function Home() {
         }
       },
       downloadModal: {
-        title: "Bald verfügbar!",
-        message: "Hundezonen befindet sich in der letzten Entwicklungsphase. In wenigen Tagen wird die App verfügbar sein:",
-        ios: "Zuerst für iOS-Nutzer",
-        android: "Danach für Android-Nutzer",
-        close: "Verstanden"
+        title: "Jetzt verfügbar!",
+        message: "Hundezonen ist jetzt verfügbar. Lade die App herunter:",
+        ios: "Für iOS-Nutzer",
+        android: "Für Android-Nutzer",
+        close: "Schließen",
+        iosLink: "https://apps.apple.com/us/app/hundezonen/id6745336299",
+        androidLink: "https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
       }
     },
     es: {
@@ -361,11 +362,13 @@ export default function Home() {
         }
       },
       downloadModal: {
-        title: "¡Próximamente disponible!",
-        message: "Hundezonen está en su última fase de desarrollo. En pocos días la app estará disponible:",
-        ios: "Primero para usuarios de iOS",
-        android: "Después para usuarios de Android",
-        close: "Entendido"
+        title: "¡Disponible ahora!",
+        message: "Hundezonen ya está disponible. Descarga la app:",
+        ios: "Para usuarios de iOS",
+        android: "Para usuarios de Android",
+        close: "Cerrar",
+        iosLink: "https://apps.apple.com/us/app/hundezonen/id6745336299",
+        androidLink: "https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
       }
     },
     en: {
@@ -489,11 +492,13 @@ export default function Home() {
         }
       },
       downloadModal: {
-        title: "Coming Soon!",
-        message: "Hundezonen is in its final development phase. The app will be available in a few days:",
-        ios: "First for iOS users",
-        android: "Then for Android users",
-        close: "Got it"
+        title: "Available Now!",
+        message: "Hundezonen is now available. Download the app:",
+        ios: "For iOS users",
+        android: "For Android users",
+        close: "Close",
+        iosLink: "https://apps.apple.com/us/app/hundezonen/id6745336299",
+        androidLink: "https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
       }
     },
     fr: {
@@ -617,11 +622,13 @@ export default function Home() {
         }
       },
       downloadModal: {
-        title: "Bientôt disponible!",
-        message: "Hundezonen est dans sa dernière phase de développement. L'app sera disponible dans quelques jours:",
-        ios: "D'abord pour les utilisateurs iOS",
-        android: "Ensuite pour les utilisateurs Android",
-        close: "Compris"
+        title: "Disponible maintenant!",
+        message: "Hundezonen est maintenant disponible. Téléchargez l'app:",
+        ios: "Pour les utilisateurs iOS",
+        android: "Pour les utilisateurs Android",
+        close: "Fermer",
+        iosLink: "https://apps.apple.com/us/app/hundezonen/id6745336299",
+        androidLink: "https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
       }
     },
     it: {
@@ -745,11 +752,13 @@ export default function Home() {
         }
       },
       downloadModal: {
-        title: "Disponibile presto!",
-        message: "Hundezonen è nella sua fase finale di sviluppo. L'app sarà disponibile tra pochi giorni:",
-        ios: "Prima per utenti iOS",
-        android: "Poi per utenti Android",
-        close: "Ho capito"
+        title: "Disponibile ora!",
+        message: "Hundezonen è ora disponibile. Scarica l'app:",
+        ios: "Per utenti iOS",
+        android: "Per utenti Android",
+        close: "Chiudi",
+        iosLink: "https://apps.apple.com/us/app/hundezonen/id6745336299",
+        androidLink: "https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
       }
     }
   };
@@ -836,12 +845,36 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button
-                  onClick={() => setShowDownloadModal(true)}
-                  className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
-                >
-                  {content.hero.cta}
-                </button>
+                <div className="flex gap-4">
+                  <a
+                    href="https://apps.apple.com/us/app/hundezonen/id6745336299"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-transform hover:scale-105"
+                  >
+                    <Image
+                      src="/apple.png"
+                      alt="Download on App Store"
+                      width={200}
+                      height={70}
+                      className="h-16 w-auto"
+                    />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-transform hover:scale-105"
+                  >
+                    <Image
+                      src="/google.png"
+                      alt="Get it on Google Play"
+                      width={200}
+                      height={70}
+                      className="h-16 w-auto"
+                    />
+                  </a>
+                </div>
               </div>
 
               <div className="flex items-center space-x-6">
@@ -1031,12 +1064,36 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <button
-                onClick={() => setShowDownloadModal(true)}
-                className="w-full bg-gray-900 hover:bg-gray-800 text-white py-4 rounded-full font-semibold transition-all"
-              >
-                {content.pricing.free.cta}
-              </button>
+              <div className="flex gap-2 justify-center">
+                <a
+                  href="https://apps.apple.com/us/app/hundezonen/id6745336299"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-105"
+                >
+                  <Image
+                    src="/apple.png"
+                    alt="Download on App Store"
+                    width={120}
+                    height={40}
+                    className="h-10 w-auto"
+                  />
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-105"
+                >
+                  <Image
+                    src="/google.png"
+                    alt="Get it on Google Play"
+                    width={120}
+                    height={40}
+                    className="h-10 w-auto"
+                  />
+                </a>
+              </div>
             </div>
 
             {/* Premium Plan */}
@@ -1058,12 +1115,36 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <button
-                onClick={() => setShowDownloadModal(true)}
-                className="w-full bg-white text-primary hover:bg-gray-100 py-4 rounded-full font-semibold transition-all relative z-10"
-              >
-                {content.pricing.premium.cta}
-              </button>
+              <div className="flex gap-2 justify-center relative z-10">
+                <a
+                  href="https://apps.apple.com/us/app/hundezonen/id6745336299"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-105"
+                >
+                  <Image
+                    src="/apple.png"
+                    alt="Download on App Store"
+                    width={120}
+                    height={40}
+                    className="h-10 w-auto"
+                  />
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-105"
+                >
+                  <Image
+                    src="/google.png"
+                    alt="Get it on Google Play"
+                    width={120}
+                    height={40}
+                    className="h-10 w-auto"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1123,13 +1204,35 @@ export default function Home() {
             {lang === "fr" && "Télécharge Hundezonen gratuitement maintenant et rejoins la communauté."}
             {lang === "it" && "Scarica Hundezonen gratis ora e unisciti alla comunità."}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => setShowDownloadModal(true)}
-              className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg"
+          <div className="flex gap-4 justify-center">
+            <a
+              href="https://apps.apple.com/us/app/hundezonen/id6745336299"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform hover:scale-105"
             >
-              {content.hero.cta}
-            </button>
+              <Image
+                src="/apple.png"
+                alt="Download on App Store"
+                width={200}
+                height={70}
+                className="h-16 w-auto"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.lwebch.HundezonenSchweiz&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform hover:scale-105"
+            >
+              <Image
+                src="/google.png"
+                alt="Get it on Google Play"
+                width={200}
+                height={70}
+                className="h-16 w-auto"
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -1203,41 +1306,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      {/* Download Modal */}
-      {showDownloadModal && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl animate-in fade-in zoom-in duration-300">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-4xl">📱</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {content.downloadModal.title}
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {content.downloadModal.message}
-              </p>
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center justify-center space-x-3 bg-gray-50 rounded-xl p-4">
-                  <span className="text-2xl">🍎</span>
-                  <span className="font-semibold text-gray-900">{content.downloadModal.ios}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 bg-gray-50 rounded-xl p-4">
-                  <span className="text-2xl">🤖</span>
-                  <span className="font-semibold text-gray-900">{content.downloadModal.android}</span>
-                </div>
-              </div>
-              <button
-                onClick={() => setShowDownloadModal(false)}
-                className="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-full font-semibold transition-all"
-              >
-                {content.downloadModal.close}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Cookie Banner */}
       <CookieBanner />
