@@ -877,8 +877,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-6">
-           
+              <div className="bg-gradient-to-r from-teal-50 to-blue-50 border border-teal-100 rounded-2xl p-4 sm:p-5">
+                <p className="text-sm text-gray-600 text-center leading-relaxed">
+                  {lang === "es" && "Una herramienta hecha con amor ❤️ para ti y tu perro por un freelance amante de los perros."}
+                  {lang === "en" && "A tool made with love ❤️ for you and your dog by a dog-loving freelancer."}
+                  {lang === "de" && "Ein Tool mit Liebe ❤️ gemacht für Dich und Deinen Hund von einem hundeliebenden Freelancer."}
+                  {lang === "it" && "Uno strumento fatto con amore ❤️ per te e il tuo cane da un freelancer amante dei cani."}
+                  {lang === "fr" && "Un outil fait avec amour ❤️ pour toi et ton chien par un freelance amoureux des chiens."}
+                </p>
               </div>
             </div>
 
