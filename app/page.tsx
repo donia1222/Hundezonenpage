@@ -837,9 +837,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 {content.hero.title}
               </h1>
-              <p className="text-xl text-gray-600 mb-4">
-                {content.hero.subtitle}
-              </p>
+
               <p className="text-lg text-gray-500 mb-8">
                 {content.hero.description}
               </p>
