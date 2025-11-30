@@ -1280,7 +1280,12 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
               {/* YouTube */}
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3">
+              <a
+                href="https://www.youtube.com/@hundezonenschweiz8758/shorts"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3 hover:from-gray-700 hover:to-gray-600 transition-all duration-300 cursor-pointer"
+              >
                 <div className="w-10 h-10 flex-shrink-0 relative">
                   <Image
                     src="/yotube.png"
@@ -1292,22 +1297,22 @@ export default function Home() {
                 <p className="text-gray-300 text-sm">
                   {content.footer.youtube}
                 </p>
-                <a
-                  href="https://www.youtube.com/@hundezonenschweiz8758/shorts"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-red-600 hover:bg-red-500 text-white rounded-full px-3 py-1 transition-all duration-300 font-medium text-xs"
-                >
+                <span className="bg-red-600 text-white rounded-full px-3 py-1 font-medium text-xs">
                   {lang === "de" && "Abonnieren"}
                   {lang === "es" && "Suscribirse"}
                   {lang === "en" && "Subscribe"}
                   {lang === "fr" && "S'abonner"}
                   {lang === "it" && "Iscriviti"}
-                </a>
-              </div>
+                </span>
+              </a>
 
               {/* TikTok */}
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3">
+              <a
+                href="https://www.tiktok.com/@hundezonenschweiz.ch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3 hover:from-gray-700 hover:to-gray-600 transition-all duration-300 cursor-pointer"
+              >
                 <div className="w-8 h-8 flex-shrink-0 relative">
                   <Image
                     src="/tiktok.png"
@@ -1319,19 +1324,14 @@ export default function Home() {
                 <p className="text-gray-300 text-sm">
                   {content.footer.tiktok}
                 </p>
-                <a
-                  href="https://www.tiktok.com/@hundezonenschweiz.ch"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black hover:bg-gray-900 text-white rounded-full px-3 py-1 transition-all duration-300 font-medium text-xs border border-gray-600"
-                >
+                <span className="bg-black text-white rounded-full px-3 py-1 font-medium text-xs border border-gray-600">
                   {lang === "de" && "Folgen"}
                   {lang === "es" && "Seguir"}
                   {lang === "en" && "Follow"}
                   {lang === "fr" && "Suivre"}
                   {lang === "it" && "Segui"}
-                </a>
-              </div>
+                </span>
+              </a>
             </div>
           </div>
 
