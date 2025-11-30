@@ -187,11 +187,9 @@ export default function Home() {
           period: "alle 2 Monate",
           priceMonth: "≈ 2.50 CHF/Monat",
           features: [
-            "Alle kostenlosen Features",
+            "Zugang zu Routenvideos",
             "Unbegrenzte Routen erstellen",
             "Kontinuierliche Updates",
-            "Entwickelt von Freelancer",
-            "Weniger als ein Kaffee",
             "Zugang zum KI-Chatbot"
           ],
           cta: "Unterstützen"
@@ -317,11 +315,9 @@ export default function Home() {
           period: "cada 2 meses",
           priceMonth: "≈ 2.50 CHF/mes",
           features: [
-            "Todas las funciones gratis",
+            "Acceso a videos de rutas",
             "Rutas ilimitadas",
             "Actualizaciones continuas",
-            "Desarrollado por freelancer",
-            "Menos que un café",
             "Acceso al chatbot IA"
           ],
           cta: "Apoyar"
@@ -447,11 +443,9 @@ export default function Home() {
           period: "every 2 months",
           priceMonth: "≈ 2.50 CHF/month",
           features: [
-            "All free features",
+            "Access to route videos",
             "Unlimited routes",
             "Continuous updates",
-            "Developed by freelancer",
-            "Less than a coffee",
             "AI Chatbot access"
           ],
           cta: "Support"
@@ -577,11 +571,9 @@ export default function Home() {
           period: "tous les 2 mois",
           priceMonth: "≈ 2.50 CHF/mois",
           features: [
-            "Toutes les fonctions gratuites",
+            "Accès aux vidéos de parcours",
             "Routes illimitées",
             "Mises à jour continues",
-            "Développé par un freelance",
-            "Moins qu'un café",
             "Accès au chatbot IA"
           ],
           cta: "Soutenir"
@@ -707,11 +699,9 @@ export default function Home() {
           period: "ogni 2 mesi",
           priceMonth: "≈ 2.50 CHF/mese",
           features: [
-            "Tutte le funzioni gratuite",
+            "Accesso ai video dei percorsi",
             "Percorsi illimitati",
             "Aggiornamenti continui",
-            "Sviluppato da freelance",
-            "Meno di un caffè",
             "Accesso al chatbot IA"
           ],
           cta: "Sostenere"
