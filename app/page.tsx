@@ -1307,13 +1307,8 @@ export default function Home() {
 
           {/* YouTube Section */}
           <div className="flex justify-center mb-8">
-            <a
-              href="https://www.youtube.com/@hundezonenschweiz8758"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3 hover:from-gray-700 hover:to-gray-600 transition-all duration-300 group"
-            >
-              <div className="w-8 h-8 flex-shrink-0 relative group-hover:scale-110 transition-transform duration-300">
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3">
+              <div className="w-8 h-8 flex-shrink-0 relative">
                 <Image
                   src="/yotube.png"
                   alt="YouTube"
@@ -1321,10 +1316,22 @@ export default function Home() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-gray-300 group-hover:text-white transition-colors text-sm">
-                {content.footer.youtube} <span className="inline-block group-hover:animate-pulse">😉</span>
+              <p className="text-gray-300 text-sm">
+                {content.footer.youtube} <span className="inline-block">😉</span>
               </p>
-            </a>
+              <a
+                href="https://www.youtube.com/@hundezonenschweiz8758?sub_confirmation=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 hover:bg-red-500 text-white rounded-full px-4 py-1.5 transition-all duration-300 font-medium text-sm"
+              >
+                {lang === "de" && "Abonnieren"}
+                {lang === "es" && "Suscribirse"}
+                {lang === "en" && "Subscribe"}
+                {lang === "fr" && "S'abonner"}
+                {lang === "it" && "Iscriviti"}
+              </a>
+            </div>
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
