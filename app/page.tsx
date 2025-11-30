@@ -1266,7 +1266,7 @@ export default function Home() {
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Social Block */}
-          <div className="bg-gray-800/50 rounded-2xl p-6 mb-8">
+          <div className="mb-16">
             <div className="text-center mb-4">
               <p className="text-gray-400 text-sm">
                 {lang === "de" && "Manchmal laden wir Videos von Routen auf unsere Kanäle hoch. Abonniere, um sie zu sehen!"}
