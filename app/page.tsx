@@ -1265,6 +1265,76 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-7xl mx-auto">
+          {/* Social Block */}
+          <div className="bg-gray-800/50 rounded-2xl p-6 mb-8">
+            <div className="text-center mb-4">
+              <p className="text-gray-400 text-sm">
+                {lang === "de" && "Manchmal laden wir Videos von Routen auf unsere Kanäle hoch. Abonniere, um sie zu sehen!"}
+                {lang === "es" && "A veces subimos videos de rutas a nuestros canales. ¡Suscríbete para verlos!"}
+                {lang === "en" && "Sometimes we upload route videos to our channels. Subscribe to watch them!"}
+                {lang === "fr" && "Parfois on met des vidéos de parcours sur nos chaînes. Abonne-toi pour les voir !"}
+                {lang === "it" && "A volte carichiamo video di percorsi sui nostri canali. Iscriviti per vederli!"}
+                {" "}😉
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
+              {/* YouTube */}
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3">
+                <div className="w-10 h-10 flex-shrink-0 relative">
+                  <Image
+                    src="/yotube.png"
+                    alt="YouTube"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-gray-300 text-sm">
+                  {content.footer.youtube}
+                </p>
+                <a
+                  href="https://www.youtube.com/@hundezonenschweiz8758/shorts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 hover:bg-red-500 text-white rounded-full px-3 py-1 transition-all duration-300 font-medium text-xs"
+                >
+                  {lang === "de" && "Abonnieren"}
+                  {lang === "es" && "Suscribirse"}
+                  {lang === "en" && "Subscribe"}
+                  {lang === "fr" && "S'abonner"}
+                  {lang === "it" && "Iscriviti"}
+                </a>
+              </div>
+
+              {/* TikTok */}
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3">
+                <div className="w-8 h-8 flex-shrink-0 relative">
+                  <Image
+                    src="/tiktok.png"
+                    alt="TikTok"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-gray-300 text-sm">
+                  {content.footer.tiktok}
+                </p>
+                <a
+                  href="https://www.tiktok.com/@hundezonenschweiz.ch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black hover:bg-gray-900 text-white rounded-full px-3 py-1 transition-all duration-300 font-medium text-xs border border-gray-600"
+                >
+                  {lang === "de" && "Folgen"}
+                  {lang === "es" && "Seguir"}
+                  {lang === "en" && "Follow"}
+                  {lang === "fr" && "Suivre"}
+                  {lang === "it" && "Segui"}
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
@@ -1307,75 +1377,6 @@ export default function Home() {
               <p className="text-gray-400">🇨🇭 Schweiz</p>
               <p className="text-gray-400">🇩🇪 Deutschland</p>
               <p className="text-gray-400">🇦🇹 Österreich</p>
-            </div>
-          </div>
-
-          {/* Social Title */}
-          <div className="text-center mb-4">
-            <p className="text-gray-400 text-sm">
-              {lang === "de" && "Manchmal laden wir Videos von Routen auf unsere Kanäle hoch. Abonniere, um sie zu sehen!"}
-              {lang === "es" && "A veces subimos videos de rutas a nuestros canales. ¡Suscríbete para verlos!"}
-              {lang === "en" && "Sometimes we upload route videos to our channels. Subscribe to watch them!"}
-              {lang === "fr" && "Parfois on met des vidéos de parcours sur nos chaînes. Abonne-toi pour les voir !"}
-              {lang === "it" && "A volte carichiamo video di percorsi sui nostri canali. Iscriviti per vederli!"}
-              {" "}😉
-            </p>
-          </div>
-
-          {/* Social Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 mb-8">
-            {/* YouTube */}
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3">
-              <div className="w-10 h-10 flex-shrink-0 relative">
-                <Image
-                  src="/yotube.png"
-                  alt="YouTube"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <p className="text-gray-300 text-sm">
-                {content.footer.youtube}
-              </p>
-              <a
-                href="https://www.youtube.com/@hundezonenschweiz8758/shorts"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-red-600 hover:bg-red-500 text-white rounded-full px-3 py-1 transition-all duration-300 font-medium text-xs"
-              >
-                {lang === "de" && "Abonnieren"}
-                {lang === "es" && "Suscribirse"}
-                {lang === "en" && "Subscribe"}
-                {lang === "fr" && "S'abonner"}
-                {lang === "it" && "Iscriviti"}
-              </a>
-            </div>
-
-            {/* TikTok */}
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3">
-              <div className="w-8 h-8 flex-shrink-0 relative">
-                <Image
-                  src="/tiktok.png"
-                  alt="TikTok"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <p className="text-gray-300 text-sm">
-                {content.footer.tiktok}
-              </p>
-              <a
-                href="https://www.tiktok.com/@hundezonenschweiz.ch"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-900 text-white rounded-full px-3 py-1 transition-all duration-300 font-medium text-xs border border-gray-600"
-              >
-                {lang === "de" && "Folgen"}
-                {lang === "es" && "Seguir"}
-                {lang === "en" && "Follow"}
-                {lang === "fr" && "Suivre"}
-                {lang === "it" && "Segui"}
-              </a>
             </div>
           </div>
 
