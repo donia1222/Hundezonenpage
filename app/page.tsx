@@ -155,6 +155,11 @@ export default function Home() {
           }
         ]
       },
+      videoSection: {
+        title: "Exklusive Routenvideos",
+        description: "Als Abonnent erhältst du Zugang zu exklusiven Videos, in denen wir dir die besten Routen zeigen. Wir erklären dir, was du dort findest, wo du parken kannst und geben dir Tipps für den perfekten Spaziergang mit deinem Hund.",
+        cta: "Jetzt abonnieren"
+      },
       services: {
         title: "Hunde-Services in deiner Nähe",
         subtitle: "Alles, was dein Hund braucht, auf einen Blick",
@@ -227,7 +232,8 @@ export default function Home() {
           privacy: "Datenschutz",
           terms: "AGB",
           contact: "Kontakt"
-        }
+        },
+        youtube: "Abonniere unseren YouTube-Kanal! Manchmal laden wir auch Videos von Routen hoch"
       },
       downloadModal: {
         title: "Jetzt verfügbar!",
@@ -282,6 +288,11 @@ export default function Home() {
             description: "Elige entre modo privado y público para tus rutas."
           }
         ]
+      },
+      videoSection: {
+        title: "Videos exclusivos de rutas",
+        description: "Como suscriptor tendrás acceso a videos exclusivos donde te mostramos las mejores rutas. Te explicamos qué puedes encontrar, dónde aparcar y te damos consejos para el paseo perfecto con tu perro.",
+        cta: "Suscribirse ahora"
       },
       services: {
         title: "Servicios caninos cerca de ti",
@@ -355,7 +366,8 @@ export default function Home() {
           privacy: "Privacidad",
           terms: "Términos",
           contact: "Contacto"
-        }
+        },
+        youtube: "¡Suscríbete a nuestro canal de YouTube! A veces también subimos videos de rutas allí"
       },
       downloadModal: {
         title: "¡Disponible ahora!",
@@ -410,6 +422,11 @@ export default function Home() {
             description: "Choose between private and public mode for your routes."
           }
         ]
+      },
+      videoSection: {
+        title: "Exclusive route videos",
+        description: "As a subscriber you get access to exclusive videos where we show you the best routes. We explain what you can find, where to park and give you tips for the perfect walk with your dog.",
+        cta: "Subscribe now"
       },
       services: {
         title: "Dog services near you",
@@ -483,7 +500,8 @@ export default function Home() {
           privacy: "Privacy",
           terms: "Terms",
           contact: "Contact"
-        }
+        },
+        youtube: "Subscribe to our YouTube channel! Sometimes we also upload route videos there"
       },
       downloadModal: {
         title: "Available Now!",
@@ -538,6 +556,11 @@ export default function Home() {
             description: "Choisis entre mode privé et public pour tes itinéraires."
           }
         ]
+      },
+      videoSection: {
+        title: "Vidéos exclusives de parcours",
+        description: "En tant qu'abonné, tu as accès à des vidéos exclusives où nous te montrons les meilleurs parcours. Nous t'expliquons ce que tu peux trouver, où te garer et te donnons des conseils pour la promenade parfaite avec ton chien.",
+        cta: "S'abonner maintenant"
       },
       services: {
         title: "Services canins près de toi",
@@ -611,7 +634,8 @@ export default function Home() {
           privacy: "Confidentialité",
           terms: "Conditions",
           contact: "Contact"
-        }
+        },
+        youtube: "Abonne-toi à notre chaîne YouTube ! Parfois on y met aussi des vidéos de parcours"
       },
       downloadModal: {
         title: "Disponible maintenant!",
@@ -666,6 +690,11 @@ export default function Home() {
             description: "Scegli tra modalità privata e pubblica per i tuoi percorsi."
           }
         ]
+      },
+      videoSection: {
+        title: "Video esclusivi dei percorsi",
+        description: "Come abbonato avrai accesso a video esclusivi dove ti mostriamo i migliori percorsi. Ti spieghiamo cosa puoi trovare, dove parcheggiare e ti diamo consigli per la passeggiata perfetta con il tuo cane.",
+        cta: "Abbonati ora"
       },
       services: {
         title: "Servizi canini vicino a te",
@@ -739,7 +768,8 @@ export default function Home() {
           privacy: "Privacy",
           terms: "Termini",
           contact: "Contatto"
-        }
+        },
+        youtube: "Iscriviti al nostro canale YouTube! A volte carichiamo anche video dei percorsi"
       },
       downloadModal: {
         title: "Disponibile ora!",
@@ -999,6 +1029,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-12 px-4 bg-white border-t border-b border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-gray-50 to-teal-50 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group relative overflow-hidden">
+            {/* Paw icon */}
+            <div className="absolute top-3 right-3 text-3xl opacity-30 animate-bounce">
+              🐾
+            </div>
+            <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 relative transition-transform duration-300 group-hover:scale-110">
+              <Image
+                src="/imagnvideo.png"
+                alt="Videos de rutas"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                <span className="bg-primary/10 text-primary text-xs font-semibold px-2 py-1 rounded-full">
+                  Premium
+                </span>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+                  {content.videoSection.title}
+                </h3>
+              </div>
+              <p className="text-gray-600 text-sm md:text-base">
+                {content.videoSection.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-teal-50">
         <div className="max-w-7xl mx-auto">
@@ -1240,6 +1303,28 @@ export default function Home() {
               <p className="text-gray-400">🇩🇪 Deutschland</p>
               <p className="text-gray-400">🇦🇹 Österreich</p>
             </div>
+          </div>
+
+          {/* YouTube Section */}
+          <div className="flex justify-center mb-8">
+            <a
+              href="https://www.youtube.com/@hundezonenschweiz8758"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-5 py-3 hover:from-gray-700 hover:to-gray-600 transition-all duration-300 group"
+            >
+              <div className="w-8 h-8 flex-shrink-0 relative group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/yotube.png"
+                  alt="YouTube"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="text-gray-300 group-hover:text-white transition-colors text-sm">
+                {content.footer.youtube} <span className="inline-block group-hover:animate-pulse">😉</span>
+              </p>
+            </a>
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
