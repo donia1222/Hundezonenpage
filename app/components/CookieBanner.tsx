@@ -24,7 +24,17 @@ export default function CookieBanner() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4 animate-slide-up">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-2xl border-2 border-primary p-6 md:p-8">
+        <div className="bg-white rounded-2xl shadow-2xl border-2 border-primary p-6 md:p-8 relative">
+          {/* Close Button */}
+          <button
+            onClick={acceptCookies}
+            className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-all"
+            aria-label="Schließen"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
             {/* Cookie Icon */}
             <div className="flex-shrink-0">
